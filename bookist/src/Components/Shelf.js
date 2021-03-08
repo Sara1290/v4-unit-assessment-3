@@ -7,9 +7,11 @@ class Shelf extends Component{
    
 
     render(){
+        const mappedTitles = this.props.shelf.map((elem) => <h5>{elem}</h5>)
         return(
             <div className="subHeader">
                 <h3> Shelf </h3>
+                {(mappedTitles)}
             </div>
             ) 
     }
