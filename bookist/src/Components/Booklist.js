@@ -1,17 +1,20 @@
 import React from 'react'
 
-const Booklist = (props) => {  
+const BookList = (props) => {  
+    const mappedBooks = props.books.map((elem) => <div className="subHeader">
+    <h2> List </h2>
+    <h4>{elem.id}</h4>
+    <h4>{elem.title}</h4>
+    <h4>{elem.author}</h4>
+    <img src={elem.img} alt='book cover'></img>
+</div>)
 
-    const mappedBooks = books.map()
      return(
-        <div className="subHeader">
-                <h2> List </h2>
-                <h4>{mappedBooks.id}</h4>
-                <h4>{mappedBooks.title}</h4>
-                <h4>{mappedBooks.author}</h4>
-                <img src={mappedBooks.img}></img>
-        </div>
+         <div>
+            {(mappedBooks)}
+         </div>
+        
     )
 }
 
-export default Booklist
+export default BookList

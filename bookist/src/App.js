@@ -1,30 +1,31 @@
 import React, { Component } from 'react'
 import './App.css';
 import Header from './Components/Header'
-import Booklist from './Components/Booklist'
+import BookList from './Components/BookList'
 import Shelf from './Components/Shelf'
 import data from './data'
-import SearchBar from './Components/SearchBar'
 
 class App extends Component{
   constructor(){
     super()
     this.state = {
-      books: data, 
+      data,
+      shelf: ''
+    
       
     }
+    this.addToShelf = this.addToShelf.bind(this)
+  }
+  
+  addToShelf(param){
+    
   }
 
-  // function filterBooks(input) {
-    
-  // };
-  
   render(){
    return (
     <div className="App">
       <Header />
-      <SearchBar />
-      <Booklist data={this.state.books}/>
+      <BookList books={this.state.data} />
       <Shelf />
     </div>
   );
