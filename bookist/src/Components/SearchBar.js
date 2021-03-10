@@ -14,7 +14,7 @@ class SearchBar extends Component {
         return(
             <div>
                 <input>Type Here!</input>
-                <button>Search</button>
+                <button onClick={() => this.props.filterBooks()}>Search</button>
                 <button>Clear Search</button>
             </div>
         )

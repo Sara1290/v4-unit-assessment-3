@@ -12,6 +12,7 @@ class Shelf extends Component{
             <div className="subHeader">
                 <h3> Shelf </h3>
                 {(mappedTitles)}
+                <button onClick={() => this.props.clearShelf()}>Clear Shelf</button>
             </div>
             ) 
     }
